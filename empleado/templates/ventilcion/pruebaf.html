@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <style>
+
+        body{
+            margin: 20px 20px 20px 20px;
+        }
+
+        .form-control {
+            border-radius: 0;
+            box-shadow: none;
+            border-color: #d2d6de
+        }
+
+        .select2-hidden-accessible {
+            border: 0 !important;
+            clip: rect(0 0 0 0) !important;
+            height: 1px !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            padding: 0 !important;
+            position: absolute !important;
+            width: 1px !important
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+        }
+
+        .select2-container--default .select2-selection--single,
+        .select2-selection .select2-selection--single {
+            border: 1px solid #d2d6de;
+            border-radius: 0;
+            padding: 6px 12px;
+            height: 34px
+        }
+
+        .select2-container--default .select2-selection--single {
+            background-color: #fff;
+            border: 1px solid #aaa;
+            border-radius: 4px
+        }
+
+        .select2-container .select2-selection--single {
+            box-sizing: border-box;
+            cursor: pointer;
+            display: block;
+            height: 28px;
+            user-select: none;
+            -webkit-user-select: none
+        }
+
+        .select2-container .select2-selection--single .select2-selection__rendered {
+            padding-right: 10px
+        }
+
+        .select2-container .select2-selection--single .select2-selection__rendered {
+            padding-left: 0;
+            padding-right: 0;
+            height: auto;
+            margin-top: -3px
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color: #444;
+            line-height: 28px
+        }
+
+        .select2-container--default .select2-selection--single,
+        .select2-selection .select2-selection--single {
+            border: 1px solid #d2d6de;
+            border-radius: 0 !important;
+            padding: 6px 12px;
+            height: 40px !important
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            height: 26px;
+            position: absolute;
+            top: 6px !important;
+            right: 1px;
+            width: 20px
+        }
+    </style>
+
+
+    <script>
+        $(document).ready(function() { 
+            $('.dataframe').addClass("table table-striped");
+
+            
+
+        });
+    </script>
+    <script>
+        $(document).ready(function() { 
+            $('#cuadro2,#cuadro1,#cuadro3,#cuadro5').hide();
+
+            $('.select2').select2({
+                closeOnSelect: false
+            });
+            
+            $('#myboton').click(function(){
+                $('#cuadro1').hide(); 
+                $('#cuadro2').show();
+                $('#cuadro3').hide(); 
+                $('#cuadro4').hide();
+                $('#cuadro5').hide(); 
+                
+            });
+            $('#myboton1').click(function(){
+                $('#cuadro2').hide(); 
+                $('#cuadro1').show();
+                $('#cuadro3').hide(); 
+                $('#cuadro4').hide(); 
+                $('#cuadro5').hide();
+            });
+            $('#myboton2').click(function(){
+                $('#cuadro2').hide(); 
+                $('#cuadro3').show();
+                $('#cuadro1').hide(); 
+                $('#cuadro4').hide();
+                $('#cuadro5').hide();
+            });
+            $('#myboton3').click(function(){
+                $('#cuadro2').hide(); 
+                $('#cuadro4').show();
+                $('#cuadro1').hide(); 
+                $('#cuadro3').hide();
+                $('#cuadro5').hide();
+            });
+            $('#myboton4').click(function(){
+                $('#cuadro2').hide(); 
+                $('#cuadro5').show();
+                $('#cuadro1').hide(); 
+                $('#cuadro3').hide();
+                $('#cuadro4').hide();
+            });
+        });
+    </script> 
+    
+    
+
+
+
+
+
+
+</head>
+
+<div class="alert alert-primary" role="alert">
+    <center><h1>Escuela Politécnica Nacional</h1></center>
+    <center><h2>Aplicación para sistemas de ventilación mecánica</h2></center>
+</div>
+
+
+{% block content %}
+<div class="form-group row">
+    <div class="col-sm-12">
+        <center>
+            <a class="btn btn-danger" href="{% url 'informe' %} "class="btn btn-warning">Borrar datos</a>
+            <a class="boton btn btn-info" href="{% url 'listaprograma' %} "class="btn btn-success">Datos</a>
+            <a class="boton btn btn-info" href="{% url 'registro' %} ">Ingreso</a>
+        </center>
+    </div>
+</div>
+<hr>
+<div >
+
+    <button class="btn btn-primary" id ="myboton3">Parámetros del sistema</button> 
+    <button class="btn btn-success" id ="myboton1">Resultados de ductos</button>
+    <button class="btn btn-primary" id ="myboton">Ruta crítica</button>  
+    <button class="btn btn-success" id ="myboton4">Ductos</button> 
+    <button class="btn btn-primary" id ="myboton2">Datos ASHRAE</button> 
+    
+</div>
+<hr>
+ 
+<div id="cuadro1">
+    <div><center><h2>Datos Calculados</h2></center></div>
+    <hr>
+    <div class="col-sm-9">
+        {{df5 | safe}}
+    </div>
+</div>
+
+<div  id="cuadro2">
+    <div><center><h2>Datos del conducto principal</h2></center></div>
+    <hr>
+    <div class="col-sm-9">
+        {{df6 | safe}}
+    </div>
+</div>
+<div id="cuadro3">
+    <div><center><h2>Datos de tabla Ashrae</h2></center></div>   
+    <hr>
+    <div class="col-sm-9">
+        {{df1 | safe}}
+    </div>
+</div>
+
+<div id="cuadro4">
+    <div><center><h2>Parámetros del sistema de ventilación </h2></center></div>   
+    <hr>
+    <div class="col-sm-9">
+        {{df3 | safe}}
+    </div>
+</div>
+
+<div id="cuadro5">
+    <div><center><h2>Dimensiones de los ductos</h2></center></div>   
+    <hr>
+    <div class="col-sm-9">
+        {{df7 | safe}}
+    </div>
+</div>
+
+
+
+
+{% endblock content %}
+    
+

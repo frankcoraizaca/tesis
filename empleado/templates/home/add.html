@@ -1,0 +1,19 @@
+<html>
+    <body>
+        {% include "home/lista.html" %}
+        
+    </body>
+</html>
+
+<h1>provando el create</h1>
+
+
+{{form.titulo}}
+<form  method="post">{% csrf_token %}
+    {{form}}
+    <button type="submit">Guardar</button>
+</form>   
+
+    
+
+

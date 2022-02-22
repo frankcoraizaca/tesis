@@ -1,0 +1,98 @@
+<!doctype html>
+{% load static %}
+
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- Page Title -->
+	<title>HelpVenti</title>
+	<!-- Compressed Styles -->
+
+  <link href="{% static "css/slides.min.css" %}" rel="stylesheet" type="text/css">
+	<!-- jQuery 3.3.1 -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+	<script src="{% static "js/jquery.min.js" %}"></script>
+	<!-- Compressed Scripts -->
+	<script src="{% static "js/slides.min.js" %}" type="text/javascript"></script>
+  
+</head>
+<body class="slides horizontal simplifiedMobile animated" style="background-color: rgb(13, 14, 14);">		
+<nav class="panel top">
+  <div class="sections desktop">
+    <div class="left"></div>
+  
+    <div class="center">
+      <img src="{% static "img/logo.png" %}" alt="HELPVENTI">
+     
+    </div>
+    <div class="right"></div>
+  </div>
+
+</nav>
+<section class="slide fade-6 kenBurns">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+      
+        <div class="fix-12-12">
+          <ul class="flex fixedSpaces verticalCenter reverse">
+            <li class="col-6-12 left middle">  
+              <p class="ae-2 fromLeft"><span class="opacity-8">La aplicación web ¨HELPVENTI¨ está diseñada para brindar ayuda a distintos profesionales que se dedican al diseño y dimensionamiento de sistemas de ventilación mecánica en edificaciones y espacios de atención médica y hospitalaria, misma que es necesaria para mantener la calidad de aire y confort de espacios interiores.</span></p>
+              <a class="button blue gradient ae-3 fromCenter cropLeft" href="{% url 'registro' %} ">Get Started</a>
+            </li>
+           
+          </ul>
+        </div>
+        
+      </div>
+
+</div>
+  <div  
+></div>
+</div>
+
+</section>
+<nav class="panel bottom forceMobileView">
+  <div class="sections desktop">
+    <div class="left"><img src="{% static "img/epn.png"  %}" alt="HELPVENTI"></div>
+    <div class="center"><span class="nextSlide"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use></svg></span></div>
+    <div class="right">
+      <h3>Escuela Politécnica Nacional</h3> 
+      <hr>
+      <h6>Facultad de Ingeniería Mecánica</h6> 
+      <hr>
+      <h6>Franklin Coraizaca</h6> 
+      <hr>
+      <h6>Año: 2022</h6>
+       
+      
+    </div>
+    
+  </div>
+  <div class="sections compact hidden">
+    <div class="right">
+      <span data-dropdown-id="2" class="button actionButton dropdownTrigger"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use></svg></span>
+    </div>
+  </div>
+</nav>
+<div class="dropdown share bottom right" data-dropdown-id="2" data-text="Take a look at this" >
+  <div class="center padding-2">
+   <div class="left"><img src="{% static "img/epn.png" %}" alt="HELPVENTI"></div>
+    <div class="right">
+      <h3>Escuela Politécnica Nacional</h3> 
+      <hr>
+      <h6>Facultad de Ingeniería Mecánica</h6> 
+      <hr>
+      <h6>Franklin Coraizaca</h6> 
+      <hr>
+      <h6>Año: 2022</h6>
+      
+    </div>
+    
+  </div>
+</div>
+</body>
+</html>
